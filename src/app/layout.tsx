@@ -35,7 +35,7 @@ export default function RootLayout({
         <Header />
 
         {/* Contenido dinámico */}
-        <main className="container mx-auto px-4 py-6">{children}</main>
+        <main className="container mx-auto px-4 py-4">{children}</main>
 
         {/* Footer común */}
         <Footer />

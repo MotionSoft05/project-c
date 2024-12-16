@@ -1,21 +1,33 @@
 "use client";
 import React from "react";
-import LavadoForm from "@/components/sections/LavadosForm";
-import ServiciosScroll from "@/components/sections/Servicios";
+import LavadosFormulario from "@/components/sections/LavadosFormulario";
+import Marcas from "@/components/sections/Marcas";
+import Servicios from "@/components/sections/Servicios";
 import Testimonios from "@/components/sections/Testimonios";
 import WhatsappButton from "@/components/common/WhatsappButton";
+import Productos from "@/components/sections/Productos";
+
 export default function Home() {
   return (
     <>
       {/* Secciones */}
       <section id="lavado" className=" bg-gray-50">
-        <LavadoForm />
+        <LavadosFormulario />
       </section>
+
+      <section id="lavado" className=" bg-gray-50">
+        <Marcas />
+      </section>
+      {/* <section id="lavado" className=" bg-gray-50">
+        <LavadoForm />
+      </section> */}
 
       <section id="servicios" className=" bg-white">
-        <ServiciosScroll />
+        <Servicios />
       </section>
-
+      <section id="servicios" className=" bg-white">
+        <Productos />
+      </section>
       <section id="testimonios" className=" bg-gray-50">
         <Testimonios />
       </section>
