@@ -1,8 +1,20 @@
 // src/components/ProductosInfo.jsx
 import React from "react";
 import Image from "next/image"; // Importa el componente Image
+import { StaticImageData } from "next/image"; // Importa StaticImageData desde next/image
+// Define la interfaz Producto para especificar el tipo de las props
+interface Producto {
+  id: number;
+  title: string;
+  description: string;
+  image: StaticImageData; // Si la imagen es de tipo StaticImageData
+}
 
-export default function ProductosInfo({ producto }) {
+interface ProductosInfoProps {
+  producto: Producto; // Tipamos la prop producto
+}
+
+const ProductosInfo: React.FC<ProductosInfoProps> = ({ producto }) => {
   return (
     <div className="p-4 bg-white rounded-lg shadow-md">
       <Image
@@ -16,4 +28,6 @@ export default function ProductosInfo({ producto }) {
       <p className="text-sm text-gray-700">{producto.description}</p>
     </div>
   );
-}
+};
+
+export default ProductosInfo;

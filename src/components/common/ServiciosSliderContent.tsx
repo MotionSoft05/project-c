@@ -1,8 +1,20 @@
 // src/components/ServiciosInfo.jsx
 import React from "react";
 import Image from "next/image"; // Asegúrate de importar `Image` desde Next.js
+import { StaticImageData } from "next/image"; // Importa StaticImageData desde next/image
+// Define la interfaz Servicio para tipar los datos de la prop `servicio`
+interface Servicio {
+  id: number;
+  title: string;
+  description: string;
+  image: StaticImageData; // Suponiendo que `image` es de tipo StaticImageData
+}
 
-export default function ServiciosInfo({ servicio }) {
+interface ServiciosInfoProps {
+  servicio: Servicio; // Tipamos la prop `servicio`
+}
+
+const ServiciosInfo: React.FC<ServiciosInfoProps> = ({ servicio }) => {
   return (
     <div className="p-4 bg-white rounded-lg shadow-md">
       <div className="py-48">
@@ -19,4 +31,6 @@ export default function ServiciosInfo({ servicio }) {
       <p className="text-sm text-gray-700">{servicio.description}</p>
     </div>
   );
-}
+};
+
+export default ServiciosInfo;
