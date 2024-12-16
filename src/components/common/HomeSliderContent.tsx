@@ -53,7 +53,7 @@ export const HomeSliderContent: React.FC<HomeSliderContentProps> = ({
           </video>
         )}
       </div>
-      <div className="container h-full sm:py-40 pb-80 relative z-10 text-white flex items-center">
+      <div className="container h-full sm:py-40 pb-80 relative z-10 text-white flex items-center bg-gradient-to-b from-gray-950 to-transparent">
         <div className="max-w-[850px]">
           {/*------------------------ HERO CONTENT START ------------------------*/}
           <div className="flex flex-col gap-2  ">

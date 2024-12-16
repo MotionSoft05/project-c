@@ -6,7 +6,7 @@ import Servicios from "@/components/sections/Servicios";
 import Testimonios from "@/components/sections/Testimonios";
 import WhatsappButton from "@/components/common/WhatsappButton";
 import Productos from "@/components/sections/Productos";
-
+import Localizacion from "@/components/sections/Localizacion";
 export default function Home() {
   return (
     <>
@@ -30,6 +30,9 @@ export default function Home() {
       </section>
       <section id="testimonios" className=" bg-gray-50">
         <Testimonios />
+      </section>
+      <section id="testimonios" className=" bg-gray-50">
+        <Localizacion />
       </section>
       {/* Botón flotante de WhatsApp */}
       <WhatsappButton />

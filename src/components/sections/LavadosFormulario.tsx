@@ -30,7 +30,7 @@ const LavadosFormulario = () => {
         ))}
 
         <div className="absolute z-10 bottom-0 left-0 right-0 w-full">
-          <div className="bg-gray-400 bg-opacity-30 rounded-lg p-6 text-black max-w-xl mx-auto">
+          <div className=" bg-opacity-30 rounded-lg p-6 text-black max-w-xl mx-auto">
             <form>
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <input
