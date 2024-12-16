@@ -1,6 +1,7 @@
 // En HomeSliderContent.tsx
 import React from "react";
 import { StaticImageData } from "next/image"; // Asegúrate de importar StaticImageData si usas Next.js
+import Image from "next/image"; // Importa el componente Image
 
 // Definir el tipo para slider
 interface Slider {
@@ -27,15 +28,15 @@ export const HomeSliderContent: React.FC<HomeSliderContentProps> = ({
       <div className="absolute -z-10 h-full w-full overflow-hidden">
         {/* SLIDER IMAGES AND VIDEO */}
         {slider?.sliderImage && (
-          <img
+          <Image
             src={
               typeof slider?.sliderImage === "string"
                 ? slider?.sliderImage
                 : slider?.sliderImage.src
-            } // Acceder a .src si es StaticImageData
+            } // Accede a .src si es StaticImageData
             alt={slider?.sliderTitle}
-            width={1920}
-            height={1080}
+            width={1920} // Define un ancho para la imagen
+            height={1080} // Define una altura
             className="object-cover h-full w-full object-center"
           />
         )}

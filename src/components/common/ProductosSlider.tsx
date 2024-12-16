@@ -1,17 +1,25 @@
 // src/components/ProductosSlider.jsx
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Keyboard, Navigation } from "swiper/modules";
-
+import { StaticImageData } from "next/image"; // Importa StaticImageData desde next/image
 import ProductosInfo from "./ProductosSliderContent";
 import { productosData } from "@/data/productosData";
 
+// Define el tipo para un producto
+interface Producto {
+  id: number;
+  title: string;
+  description: string;
+  image: StaticImageData;
+}
+
 const ProductosSlider = () => {
-  const [productos, setProductos] = useState([]);
-  const productosSwiperRef = useRef();
+  // Usa el tipo Producto[] para el estado de productos
+  const [productos, setProductos] = useState<Producto[]>([]);
 
   useEffect(() => {
-    setProductos(productosData);
+    setProductos(productosData); // Aquí no habrá problema con el tipo
   }, []);
 
   return (
@@ -36,9 +44,6 @@ const ProductosSlider = () => {
           }}
           loop={true}
           modules={[Autoplay, Keyboard, Navigation]}
-          onBeforeInit={(swiper) => {
-            productosSwiperRef.current = swiper;
-          }}
         >
           {productos.map((producto) => (
             <SwiperSlide key={producto.id}>
