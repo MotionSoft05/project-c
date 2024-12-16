@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Project C
 
-## Getting Started
+Project C es una aplicación web desarrollada con **Next.js** que sirve como base para una plataforma de lavado de autos. El proyecto se estructura usando **TypeScript** y **Tailwind CSS** para el estilizado, lo que permite una experiencia rápida y eficiente tanto en desarrollo como en producción.
 
-First, run the development server:
+## Tecnologías utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js** (Versión 15.1.0): Un framework de React que permite la creación de aplicaciones web rápidas y escalables. Proporciona renderizado del lado del servidor (SSR), generación estática de páginas (SSG) y soporte para la creación de API Routes.
+- **React** (Versión 19.0.0): La biblioteca de JavaScript para construir interfaces de usuario.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Tailwind CSS** (Versión 3.4.1): Un framework de CSS que facilita el diseño de interfaces web de manera flexible y rápida utilizando clases utilitarias.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **TypeScript** (Versión 5): Un superset de JavaScript que agrega tipado estático a tus proyectos, mejorando la calidad del código y reduciendo errores durante el desarrollo.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **PostCSS**: Herramienta de procesamiento de CSS que se usa para optimizar y personalizar el flujo de trabajo de Tailwind CSS.
 
-## Learn More
+- **Geist UI**: Una biblioteca de componentes de interfaz de usuario que se usa para un diseño limpio y minimalista.
 
-To learn more about Next.js, take a look at the following resources:
+## Estructura del proyecto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+La estructura del proyecto sigue una arquitectura modular, lo que facilita la escalabilidad y mantenimiento. Algunas de las carpetas clave incluyen:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **`/src/app`**: Contiene las rutas principales de la aplicación (como `lavados`, `peticion`, `resumen`).
+- **`/src/components`**: Componentes reutilizables de UI (como botones, formularios, etc.).
+- **`/src/context`**: Manejo de estados globales y contexto de la aplicación.
+- **`/src/styles`**: Archivos relacionados con los estilos, incluidos los de Tailwind y PostCSS.
+- **`/src/utils`**: Funciones utilitarias que pueden ser utilizadas en todo el proyecto.
