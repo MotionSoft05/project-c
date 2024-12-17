@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Keyboard, Navigation } from "swiper/modules";
 import { StaticImageData } from "next/image"; // Importa StaticImageData desde next/image
 
-import ServiciosInfo from "./ServiciosSliderContent";
+import ServiciosSliderContent from "./ServiciosSliderContent";
 import { serviciosData } from "@/data/serviciosData";
 
 // Define la interfaz para un servicio
@@ -11,17 +11,28 @@ interface Servicio {
   id: number;
   title: string;
   description: string;
-  image: StaticImageData; // Cambia el tipo de 'string' a 'StaticImageData'
+  longDescription: string;
+  image: StaticImageData;
 }
 
 const ServiciosSlider = () => {
-  // Inicializar el estado con el tipo de 'Servicio'
   const [servicios, setServicios] = useState<Servicio[]>([]);
-  // const serviciosSwiperRef = useRef();
+  const swiperRef = useRef<any>(null);
 
   useEffect(() => {
     setServicios(serviciosData); // Asumiendo que serviciosData es del tipo Servicio[]
   }, []);
+
+  // Control de autoplay
+  const toggleAutoplay = (pause: boolean) => {
+    if (swiperRef.current) {
+      if (pause) {
+        swiperRef.current.swiper.autoplay.stop(); // Pausar autoplay
+      } else {
+        swiperRef.current.swiper.autoplay.start(); // Reanudar autoplay
+      }
+    }
+  };
 
   return (
     <section className="bg-gray-50 py-7">
@@ -45,13 +56,14 @@ const ServiciosSlider = () => {
           }}
           loop={true}
           modules={[Autoplay, Keyboard, Navigation]}
-          // onBeforeInit={(swiper) => {
-          //   serviciosSwiperRef.current = swiper;
-          // }}
+          ref={swiperRef}
         >
           {servicios.map((servicio) => (
             <SwiperSlide key={servicio.id}>
-              <ServiciosInfo servicio={servicio} />
+              <ServiciosSliderContent
+                servicio={servicio}
+                toggleAutoplay={toggleAutoplay} // Pasamos la función para controlar el autoplay
+              />
             </SwiperSlide>
           ))}
         </Swiper>

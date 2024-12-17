@@ -1,18 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Oxanium } from "next/font/google";
 import "./globals.css";
 
 // Importa componentes comunes
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// Importar la fuente Oxanium
+const oxanium = Oxanium({
+  variable: "--font-oxanium",
   subsets: ["latin"],
 });
 
@@ -29,13 +25,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100 text-gray-900`}
+        className={`${oxanium.variable} antialiased bg-gray-100 text-gray-900`}
       >
         {/* Header común */}
         <Header />
 
         {/* Contenido dinámico */}
-        <main className="container mx-auto px-4 py-4">{children}</main>
+        <main className="">{children}</main>
 
         {/* Footer común */}
         <Footer />
