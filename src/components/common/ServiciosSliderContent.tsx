@@ -6,9 +6,8 @@ interface Servicio {
   id: number;
   title: string;
   shortDescription: string;
-  detailedDescription: string; // Nueva propiedad para la descripción larga
+  detailedDescription: string[];
   image: StaticImageData;
-  toggleAutoplay: (pause: boolean) => void; // Función para manejar el autoplay desde el slider
 }
 
 interface ServiciosInfoProps {
