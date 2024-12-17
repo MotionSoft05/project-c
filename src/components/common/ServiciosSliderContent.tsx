@@ -13,6 +13,7 @@ interface Servicio {
 
 interface ServiciosInfoProps {
   servicio: Servicio;
+  toggleAutoplay: (pause: boolean) => void; // Asegúrate de que esta función esté definida correctamente
 }
 
 const ServiciosSliderContent: React.FC<ServiciosInfoProps> = ({

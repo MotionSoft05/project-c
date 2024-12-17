@@ -10,8 +10,8 @@ import { serviciosData } from "@/data/serviciosData";
 interface Servicio {
   id: number;
   title: string;
-  description: string;
-  longDescription: string;
+  shortDescription: string; // Cambié 'description' por 'shortDescription'
+  detailedDescription: string[]; // Cambié 'longDescription' por 'detailedDescription'
   image: StaticImageData;
 }
 
