@@ -213,7 +213,7 @@ const LavadosFormulario = () => {
               </div>
 
               <button className="text-base font-semibold  text-white m-6 group relative w-max">
-                <span> Enviar petición de lavado</span>
+                <span> Solicita tu lavado ahora</span>
                 <span className="absolute -bottom-1 left-0 w-0 transition-all h-0.5 bg-indigo-600 group-hover:w-full"></span>
               </button>
             </motion.form>
