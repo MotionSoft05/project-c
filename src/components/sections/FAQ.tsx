@@ -6,7 +6,8 @@ import { productosFAQ } from "@/data/productosFAQ";
 import { serviciosFAQ } from "@/data/serviciosFAQ";
 
 const AccordionSection = () => {
-  const [openAccordion, setOpenAccordion] = useState(null); // Controla el acordeón abierto
+  const [openAccordion, setOpenAccordion] = useState<number | null>(null);
+
   const [showProducts, setShowProducts] = useState(true); // Controla si se muestran productos o servicios
 
   // Alternar entre productos y servicios
@@ -16,7 +17,7 @@ const AccordionSection = () => {
   };
 
   // Alternar el acordeón individual
-  const toggleAccordion = (index) => {
+  const toggleAccordion = (index: number) => {
     if (openAccordion === index) {
       return setOpenAccordion(null);
     }

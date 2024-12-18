@@ -37,8 +37,6 @@ const HomeSlider = () => {
           </SwiperSlide>
         ))}
       </ul>
-
-      <div className="hero-two-pagination swiper-pagination"></div>
     </Swiper>
   );
 };

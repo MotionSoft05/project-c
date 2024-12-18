@@ -62,8 +62,8 @@ const Marcas = () => {
           whileInView="visible"
           transition={{ duration: 1, delay: 0.5 }}
           variants={{
-            visible: { opacity: 1, x: 0 },
-            hidden: { opacity: 0, x: 100 },
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
           }}
           className="h-24 flex items-center justify-center w-24"
         >
