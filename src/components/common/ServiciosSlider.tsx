@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Keyboard, Navigation } from "swiper/modules";
 import { StaticImageData } from "next/image"; // Importa StaticImageData desde next/image
-
+import { motion } from "framer-motion";
 import ServiciosSliderContent from "./ServiciosSliderContent";
 import { serviciosData } from "@/data/serviciosData";
 
@@ -35,11 +35,39 @@ const ServiciosSlider = () => {
   };
 
   return (
-    <section className="bg-gray-50 py-7">
+    <section className="-50 pt-7">
       <div className="container relative">
-        <h2 className="text-center text-3xl font-bold mb-6">
-          Nuestros Servicios
-        </h2>
+        <div className="text-center mb-10">
+          {/* Título principal con animación */}
+
+          <motion.h2
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.8 }}
+            variants={{
+              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, x: -50 },
+            }}
+            className="text-3xl md:text-4xl font-bold mb-3 text-gray-800"
+          >
+            Nuestros Servicios
+          </motion.h2>
+          {/* Breve descripción con estilo más sutil */}
+
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.8, delay: 0.6 }}
+            variants={{
+              visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, y: 50 },
+            }}
+            className="text-lg text-gray-600 max-w-2xl mx-auto"
+          >
+            Ofrecemos soluciones personalizadas para el cuidado, limpieza y
+            detallado de tu vehículo.
+          </motion.p>
+        </div>
 
         {/* SLIDER */}
         <Swiper

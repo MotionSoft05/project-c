@@ -23,7 +23,7 @@ const ProductosSlider = () => {
   }, []);
 
   return (
-    <section className="bg-gray-50 py-12">
+    <section className="bg-gray-50 ">
       <div className="container relative">
         <h2 className="text-center text-3xl font-bold mb-6">
           Nuestros Productos

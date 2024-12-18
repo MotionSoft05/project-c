@@ -16,16 +16,21 @@ interface ProductosInfoProps {
 
 const ProductosInfo: React.FC<ProductosInfoProps> = ({ producto }) => {
   return (
-    <div className="p-4 bg-white rounded-lg shadow-md">
-      <Image
-        src={producto.image} // Utiliza el atributo `src` como la URL de la imagen
-        alt={producto.title} // Asegúrate de tener un `alt` apropiado
-        width={500} // Establece un ancho, ajusta según sea necesario
-        height={300} // Establece una altura, ajusta según sea necesario
-        className="object-cover rounded-md mb-4" // Mantén las clases CSS
-      />
-      <h3 className="text-lg font-semibold mb-2">{producto.title}</h3>
-      <p className="text-sm text-gray-700">{producto.description}</p>
+    <div className="relative w-full h-44 bg-white rounded-lg shadow-md overflow-hidden">
+      <div className="relative w-full h-full">
+        <Image
+          src={producto.image} // Utiliza el atributo `src` como la URL de la imagen
+          alt={producto.title} // Asegúrate de tener un `alt` apropiado
+          layout="fill" // La imagen ocupa todo el espacio
+          objectFit="cover" // La imagen cubre el contenedor
+          className="rounded-md"
+        />
+      </div>
+      {/* Descripción corta y botón */}
+      <div className="absolute bottom-0 w-full p-4 bg-gradient-to-t from-black to-transparent text-white">
+        <h3 className="text-lg font-semibold mb-2">{producto.title}</h3>
+        <p className="text-sm">{producto.description}</p>
+      </div>
     </div>
   );
 };
