@@ -153,7 +153,7 @@ const LavadosFormulario = () => {
                 </div>
               </div>
 
-              <div className="relative z-0 w-full mb-5 group text-white">
+              <div className="relative z-0 w-full mb-5 group  ">
                 <Autocomplete
                   multiple
                   freeSolo

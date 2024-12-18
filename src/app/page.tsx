@@ -7,6 +7,7 @@ import Testimonios from "@/components/sections/Testimonios";
 import WhatsappButton from "@/components/common/WhatsappButton";
 import Productos from "@/components/sections/Productos";
 import Localizacion from "@/components/sections/Localizacion";
+import FAQ from "@/components/sections/FAQ";
 export default function Home() {
   return (
     <>
@@ -27,6 +28,9 @@ export default function Home() {
       </section>
       <section id="servicios" className=" bg-white">
         <Productos />
+      </section>
+      <section id="testimonios" className=" bg-gray-50">
+        <FAQ />
       </section>
       <section id="testimonios" className=" bg-gray-50">
         <Testimonios />
