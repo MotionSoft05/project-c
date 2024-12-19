@@ -20,7 +20,7 @@ export const categoriesData = [
           "Quick Detail con aroma a cereza, formulado para otorgar un brillo único. Puede ser utilizado en superficies húmedas y secas. También sirve para remover polvillo y marcas de pintura.",
         envase250: false,
         envaseMini: false,
-        price: "1",
+        price: "8.000",
         discountPrice: "",
         image: carwash2, // Imagen del producto
       },
@@ -31,8 +31,8 @@ export const categoriesData = [
           "Quick Detail con aroma a durazno, formulado para otorgar un brillo único. Puede ser utilizado en superficies húmedas y secas. También sirve para remover polvillo y marcas de pintura.",
         envase250: false,
         envaseMini: false,
-        price: "1",
-        discountPrice: "",
+        price: "8.000",
+        discountPrice: "4.000",
         image: carwash2,
       },
       {

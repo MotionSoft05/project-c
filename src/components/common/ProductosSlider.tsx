@@ -186,7 +186,9 @@ const CategoryList = () => {
                     {/* Detalles del producto */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent flex flex-col justify-end p-4 text-white">
                       <h4 className="text-lg font-semibold">{product.title}</h4>
-                      <p className="text-xs">{product.description}</p>
+                      <p className="text-xs overflow-y-auto max-h-16">
+                        {product.description}
+                      </p>
                       <div className="mt-2 flex items-center justify-between">
                         {/* Condición para mostrar el precio de descuento */}
                         {product.discountPrice ? (
