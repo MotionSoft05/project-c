@@ -4,254 +4,247 @@ import carwash2 from "@/../public/assets/images/carwash-imagen-default-2.jpg";
 import carwash3 from "@/../public/assets/images/carwash-imagen-default-3.jpg";
 import carwash4 from "@/../public/assets/images/carwash-imagen-default-4.jpg";
 
-// Función para generar precios aleatorios entre un rango (por ejemplo, 100 a 500)
-const getRandomPrice = () => (Math.random() * (500 - 100) + 100).toFixed(2);
-
 export const categoriesData = [
   {
     id: 1,
-    title: "Cuidado y Limpieza",
-    description: "Productos para la limpieza interior y exterior del vehículo.",
+    title: "Línea Profesional",
+    description:
+      "Todo lo relacionado con productos avanzados para profesionales del detallado automotriz.",
     image: carwash1,
-    subcategories: [
+    products: [
       {
         id: 1,
-        title: "Aerosoles y Limpiadores",
+        title: "Pulidora de Alta Velocidad",
         description:
-          "Aerosoles y limpiadores especializados para el interior y exterior del vehículo.",
+          "Pulidora profesional para un acabado perfecto en la pintura del vehículo.",
+        price: "399.99",
+        discountPrice: "299.99",
         image: carwash2,
-        products: [
-          {
-            id: 1,
-            title: "Aerosol Limpiador de Interiores",
-            image: carwash2,
-            details: "Aerosol para limpieza rápida de interiores.",
-            description:
-              "Ideal para limpiar plásticos, cuero y otras superficies del interior del auto.",
-            price: getRandomPrice(), // Precio aleatorio
-          },
-          {
-            id: 2,
-            title: "Limpiador de Tapicerías",
-            image: carwash3,
-            details: "Limpiador de tapicerías en spray.",
-            description:
-              "Eliminación de manchas y suciedad de telas y alfombras de los autos.",
-            price: getRandomPrice(), // Precio aleatorio
-          },
-          {
-            id: 3,
-            title: "Limpiador de Tapicerías",
-            image: carwash3,
-            details: "Limpiador de tapicerías en spray.",
-            description:
-              "Eliminación de manchas y suciedad de telas y alfombras de los autos.",
-            price: getRandomPrice(), // Precio aleatorio
-          },
-          {
-            id: 4,
-            title: "Limpiador de Tapicerías",
-            image: carwash3,
-            details: "Limpiador de tapicerías en spray.",
-            description:
-              "Eliminación de manchas y suciedad de telas y alfombras de los autos.",
-            price: getRandomPrice(), // Precio aleatorio
-          },
-          {
-            id: 5,
-            title: "Limpiador de Tapicerías",
-            image: carwash3,
-            details: "Limpiador de tapicerías en spray.",
-            description:
-              "Eliminación de manchas y suciedad de telas y alfombras de los autos.",
-            price: getRandomPrice(), // Precio aleatorio
-          },
-        ],
       },
       {
         id: 2,
-        title: "Lava Autos y Revividor de Interiores",
+        title: "Kit Detallado Profesional",
         description:
-          "Shampoo para autos y productos revitalizadores para interiores.",
+          "Kit completo con herramientas y productos para el detallado automotriz de nivel profesional.",
+        price: "499.99",
+        discountPrice: "399.99",
         image: carwash3,
-        products: [
-          {
-            id: 1,
-            title: "Shampoo para Autos",
-            image: carwash4,
-            details: "Shampoo de alta calidad para lavado exterior.",
-            description:
-              "Limpieza profunda para dejar el auto impecable y brillante.",
-            price: getRandomPrice(), // Precio aleatorio
-          },
-          {
-            id: 2,
-            title: "Revividor de Plásticos",
-            image: carwash4,
-            details: "Revividor para plásticos del interior y exterior.",
-            description:
-              "Restaurador y revitalizador de piezas de plástico para un acabado nuevo.",
-            price: getRandomPrice(), // Precio aleatorio
-          },
-        ],
       },
     ],
   },
   {
     id: 2,
-    title: "Protección y Sellado",
-    description: "Selladores y ceras para proteger la pintura y superficies.",
-    image: carwash1,
-    subcategories: [
+    title: "Limpieza Exterior",
+    description:
+      "Incluye ceras líquidas, lava autos, selladores cerámicos, revitalizadores de exteriores, y cualquier producto específico para la apariencia exterior.",
+    image: carwash2,
+    products: [
       {
         id: 1,
-        title: "Selladores Líquidos y Cerámicos",
+        title: "Cera Líquida Rápida",
         description:
-          "Selladores líquidos y cerámicos para mayor protección y duración.",
-        image: carwash2,
-        products: [
-          {
-            id: 1,
-            title: "Sellador para Pintura",
-            image: carwash2,
-            details: "Sellador líquido para protección de pintura.",
-            description:
-              "Prolonga la vida de la pintura y ofrece resistencia al agua y suciedad.",
-            price: getRandomPrice(), // Precio aleatorio
-          },
-          {
-            id: 2,
-            title: "Sellador Cerámico para Rines",
-            image: carwash3,
-            details: "Sellador cerámico para proteger los rines.",
-            description:
-              "Sellado de alta resistencia para rines, protegiendo contra la suciedad y desgaste.",
-            price: getRandomPrice(), // Precio aleatorio
-          },
-        ],
+          "Cera líquida para un acabado brillante y duradero en la pintura del vehículo.",
+        price: "29.99",
+        discountPrice: "19.99",
+        image: carwash4,
       },
       {
         id: 2,
-        title: "Ceras y Productos Cerámicos",
+        title: "Lava Autos Concentrado",
         description:
-          "Ceras y productos cerámicos para un acabado perfecto y duradero.",
-        image: carwash3,
-        products: [
-          {
-            id: 1,
-            title: "Cera Cerámica para Autos",
-            image: carwash4,
-            details: "Cera cerámica para auto.",
-            description:
-              "Cera de alta calidad que proporciona un acabado brillante y duradero.",
-            price: getRandomPrice(), // Precio aleatorio
-          },
-        ],
+          "Detergente concentrado ideal para la limpieza de la carrocería de tu vehículo.",
+        price: "24.99",
+        discountPrice: "18.99",
+        image: carwash1,
       },
     ],
   },
   {
     id: 3,
-    title: "Aromatización",
-    description: "Aromatizantes y perfumes para vehículos.",
-    image: carwash1,
-    subcategories: [
+    title: "Limpieza Interior",
+    description:
+      "Perfumes, aromatizantes, limpiadores, revividor de interiores, y productos similares para el cuidado y mantenimiento del interior del vehículo.",
+    image: carwash3,
+    products: [
       {
         id: 1,
-        title: "Aromatizantes de Interiores",
+        title: "Aromatizante Air Fresh",
         description:
-          "Aromatizantes especialmente diseñados para interiores de autos.",
+          "Aromatizante para el interior del vehículo con fragancia fresca y duradera.",
+        price: "15.99",
+        discountPrice: "9.99",
         image: carwash2,
-        products: [
-          {
-            id: 1,
-            title: "Aromatizante para Autos",
-            image: carwash2,
-            details: "Aromatizante fresco para interiores de vehículos.",
-            description:
-              "Aromatiza y refresca el ambiente dentro del auto con una fragancia duradera.",
-            price: getRandomPrice(), // Precio aleatorio
-          },
-        ],
       },
       {
         id: 2,
-        title: "Aromatizantes de Ambientes",
-        description: "Aromatizantes para automóviles y ambientes en general.",
+        title: "Limpiador de Interiores Multiusos",
+        description:
+          "Limpiador eficiente para tapicerías y superficies interiores del vehículo.",
+        price: "22.99",
+        discountPrice: "17.99",
         image: carwash3,
-        products: [
-          {
-            id: 1,
-            title: "Perfume para Vehículos de Larga Distancia",
-            image: carwash3,
-            details: "Perfume para vehículos con fragancia duradera.",
-            description:
-              "Ideal para mantener el aroma fresco durante largos viajes.",
-            price: getRandomPrice(), // Precio aleatorio
-          },
-        ],
       },
     ],
   },
   {
     id: 4,
-    title: "Accesorios",
-    description: "Accesorios para el mantenimiento vehicular.",
-    image: carwash1,
-    subcategories: [
+    title: "Accesorios de Limpieza",
+    description:
+      "Telas finas, paños de microfibra, esponjas, cubiertas (ruedas), y herramientas para limpieza.",
+    image: carwash4,
+    products: [
       {
         id: 1,
-        title: "Cubiertas y Telas de Limpieza",
-        image: carwash2,
+        title: "Paño Microfibra Premium",
         description:
-          "Cubiertas para protección y telas especializadas para limpieza.",
-        products: [
-          {
-            id: 1,
-            title: "Cubierta de Rueda para Protección",
-            image: carwash2,
-            details: "Cubierta de rueda para protección contra suciedad.",
-            description:
-              "Protege las ruedas del vehículo de la suciedad y desgaste.",
-            price: getRandomPrice(), // Precio aleatorio
-          },
-          {
-            id: 2,
-            title: "Tela de Microfibra para Secado",
-            image: carwash3,
-            details: "Tela de microfibra para secado de autos.",
-            description:
-              "Secado rápido y sin rayas para mantener el auto impecable.",
-            price: getRandomPrice(), // Precio aleatorio
-          },
-        ],
+          "Paño de microfibra de alta calidad para la limpieza sin rayar superficies.",
+        price: "8.99",
+        discountPrice: "6.99",
+        image: carwash4,
       },
       {
         id: 2,
-        title: "Productos Especializados",
+        title: "Esponja de Lavado Suave",
         description:
-          "Productos de limpieza y mantenimiento especializado para vehículos.",
+          "Esponja suave para lavado de vehículos, ideal para no dañar la pintura.",
+        price: "12.99",
+        discountPrice: "9.99",
+        image: carwash1,
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "Aerosoles y Minipresentaciones",
+    description:
+      "Productos en formato aerosol, minis, o envases pequeños ideales para detalles específicos.",
+    image: carwash1,
+    products: [
+      {
+        id: 1,
+        title: "Aerosol Limpiador Rápido",
+        description:
+          "Limpiador rápido en aerosol para uso en superficies duras y detalles finos.",
+        price: "10.99",
+        discountPrice: "7.99",
+        image: carwash2,
+      },
+      {
+        id: 2,
+        title: "Mini Cera Protectora",
+        description:
+          "Cera en formato mini ideal para detalles rápidos y protección extra en superficies.",
+        price: "15.99",
+        discountPrice: "11.99",
         image: carwash3,
-        products: [
-          {
-            id: 1,
-            title: "Detergente Líquido de Uso Pesado",
-            image: carwash4,
-            details: "Detergente líquido para uso pesado.",
-            description:
-              "Eliminación de manchas y suciedad resistente en superficies de autos.",
-            price: getRandomPrice(), // Precio aleatorio
-          },
-          {
-            id: 2,
-            title: "Desinfectante de Alta Concentración",
-            image: carwash4,
-            details: "Desinfectante para interiores del auto.",
-            description:
-              "Desinfectante de alta concentración para eliminar bacterias y malos olores.",
-            price: getRandomPrice(), // Precio aleatorio
-          },
-        ],
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Perfumes y Aromatizantes",
+    description:
+      "Exclusivo para fragancias diseñadas para autos, ya que suelen ser populares entre los clientes.",
+    image: carwash2,
+    products: [
+      {
+        id: 1,
+        title: "Aromatizante Fresh Air",
+        description:
+          "Fragancia fresca para un ambiente agradable en el interior del vehículo.",
+        price: "12.99",
+        discountPrice: "9.99",
+        image: carwash4,
+      },
+      {
+        id: 2,
+        title: "Perfume Auto Elegant",
+        description:
+          "Perfume sofisticado para vehículos con notas de madera y especias.",
+        price: "18.99",
+        discountPrice: "14.99",
+        image: carwash1,
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "Selladores y Protección",
+    description:
+      "Selladores líquidos, cerámicos y otros productos diseñados para proteger las superficies del vehículo.",
+    image: carwash3,
+    products: [
+      {
+        id: 1,
+        title: "Sellador Cerámico",
+        description:
+          "Sellador cerámico avanzado para una protección duradera de la pintura.",
+        price: "59.99",
+        discountPrice: "49.99",
+        image: carwash2,
+      },
+      {
+        id: 2,
+        title: "Protector de Neumáticos",
+        description:
+          "Protege y da brillo a los neumáticos con este producto especializado.",
+        price: "19.99",
+        discountPrice: "14.99",
+        image: carwash3,
+      },
+    ],
+  },
+  {
+    id: 8,
+    title: "Merchandising",
+    description:
+      "Productos de marca (ropa, gorras, llaveros, etc.) relacionados con la empresa o productos Toxic Shine.",
+    image: carwash4,
+    products: [
+      {
+        id: 1,
+        title: "Camiseta Toxic Shine",
+        description:
+          "Camiseta de algodón con el logo de Toxic Shine, cómoda y elegante.",
+        price: "25.99",
+        discountPrice: "19.99",
+        image: carwash4,
+      },
+      {
+        id: 2,
+        title: "Gorra Toxic Shine",
+        description:
+          "Gorra con el logo de la marca, perfecta para el día a día.",
+        price: "15.99",
+        discountPrice: "11.99",
+        image: carwash1,
+      },
+    ],
+  },
+  {
+    id: 9,
+    title: "Gama Económica o Hogar",
+    description:
+      "Productos más accesibles o diseñados para limpieza fuera del uso automotriz profesional, si aplicable.",
+    image: carwash1,
+    products: [
+      {
+        id: 1,
+        title: "Detergente Multiusos",
+        description:
+          "Detergente eficaz para limpieza en general, ideal para el hogar.",
+        price: "6.99",
+        discountPrice: "4.99",
+        image: carwash2,
+      },
+      {
+        id: 2,
+        title: "Limpiador de Vidrios",
+        description:
+          "Limpiador eficaz para vidrios, ideal para hogar y vehículos.",
+        price: "4.99",
+        discountPrice: "3.99",
+        image: carwash3,
       },
     ],
   },
