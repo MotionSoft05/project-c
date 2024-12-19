@@ -153,7 +153,7 @@ const LavadosFormulario = () => {
                 </div>
               </div>
 
-              <div className="relative z-0 w-full mb-5 group  ">
+              <div className="relative z-0 w-full mb-5 group">
                 <Autocomplete
                   multiple
                   freeSolo
@@ -199,12 +199,21 @@ const LavadosFormulario = () => {
                           color: "white", // Cambia el color del texto del input
                         },
                       }}
-                      InputLabelProps={{
-                        sx: {
+                      sx={{
+                        "& .MuiInputLabel-root": {
                           color: "white", // Cambia el color del label
-                          "&.Mui-focused": {
-                            color: "white", // Cambia el color del label cuando está enfocado
-                          },
+                        },
+                        "& .MuiInputLabel-root.Mui-focused": {
+                          color: "white", // Cambia el color del label cuando está enfocado
+                        },
+                        "& .MuiInput-underline:before": {
+                          borderBottomColor: "white", // Cambia el color de la línea antes del enfoque
+                        },
+                        "& .MuiInput-underline:hover:before": {
+                          borderBottomColor: "white", // Cambia el color de la línea al pasar el ratón
+                        },
+                        "& .MuiInput-underline.Mui-focused:before": {
+                          borderBottomColor: "white", // Cambia el color de la línea cuando está enfocado
                         },
                       }}
                     />
