@@ -9,21 +9,20 @@ import "swiper/css/pagination";
 
 export default function Testimonios() {
   return (
-    <section className="py-24">
+    <section className="py-24 bg-gray-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center items-center gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8 max-w-sm sm:max-w-2xl lg:max-w-full mx-auto">
+        <div className="flex justify-center items-center gap-y-1 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8 max-w-sm sm:max-w-2xl lg:max-w-full mx-auto">
           <div className="w-full lg:w-2/5">
-            <h2 className="text-4xl font-bold text-gray-900 leading-[3.25rem] mb-8">
-              Confia en la{" "}
-              <span className=" text-transparent bg-clip-text bg-gradient-to-tr from-indigo-600 to-violet-600">
-                opinión{" "}
+            <h2 className="text-4xl font-bold text-white leading-[3.25rem] mb-4">
+              Lo que dicen nuestros{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-tr from-indigo-600 to-violet-600">
+                clientes
               </span>
-              de nuestros clientes
             </h2>
-            {/* Slider controls */}
-            <div className="flex items-center justify-center lg:justify-start gap-10">
-              {/* Puedes mantener los controles prev/next aquí si quieres */}
-            </div>
+            <p className="text-lg text-gray-300 mb-8">
+              Descubre cómo nuestros servicios han transformado la experiencia
+              de nuestros clientes. ¡Estas son sus historias!
+            </p>
           </div>
           <div className="w-full lg:w-3/5">
             {/* Slider wrapper */}

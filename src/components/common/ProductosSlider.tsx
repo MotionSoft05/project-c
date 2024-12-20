@@ -35,18 +35,29 @@ const CategoryList = () => {
         />
 
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-4">
+          {/* Título con animación similar */}
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.8 }}
+            variants={{
+              visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, y: 20 },
+            }}
             className="text-3xl md:text-5xl font-bold mb-2"
           >
             Nuestros Productos
           </motion.h2>
+
+          {/* Descripción con animación similar */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            variants={{
+              visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, y: 20 },
+            }}
             className="text-md md:text-xl max-w-3xl"
           >
             Descubre nuestra amplia gama de productos diseñados para el cuidado,
@@ -133,10 +144,30 @@ const CategoryList = () => {
           }}
           className="my-6 text-center"
         >
-          <h2 className="text-2xl font-bold text-gray-800">
+          <motion.h2
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.8 }}
+            variants={{
+              visible: { opacity: 1, x: 0 },
+              hidden: { opacity: 0, x: -50 },
+            }}
+            className="text-2xl font-bold text-gray-800"
+          >
             {selectedCategory.title}
-          </h2>
-          <p className="text-gray-600">{selectedCategory.description}</p>
+          </motion.h2>
+          <motion.p
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 0.8, delay: 0.6 }}
+            variants={{
+              visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, y: 50 },
+            }}
+            className="text-gray-600"
+          >
+            {selectedCategory.description}
+          </motion.p>
         </motion.div>
       )}
       {/* Slider de Productos */}

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Localizacion() {
   return (
-    <section className="py-12 bg-gray-100">
+    <section className="py-12 ">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Título con estilo mejorado */}
         <h2 className="text-4xl font-bold text-gray-900 text-center mb-4">
