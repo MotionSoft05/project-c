@@ -85,6 +85,7 @@ const ServiciosSlider = () => {
           loop={true}
           modules={[Autoplay, Keyboard, Navigation]}
           ref={swiperRef}
+          className="shadow-lg"
         >
           {servicios.map((servicio) => (
             <SwiperSlide key={servicio.id}>

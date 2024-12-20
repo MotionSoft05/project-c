@@ -27,7 +27,7 @@ const ServiciosSliderContent: React.FC<ServiciosInfoProps> = ({
   };
 
   return (
-    <div className="relative w-full h-[500px]  rounded-lg shadow-md overflow-hidden">
+    <div className="relative w-full h-[500px] rounded-lg shadow-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl overflow-hidden">
       {/* Imagen del servicio */}
       <div className="relative w-full h-full">
         <Image

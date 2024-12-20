@@ -47,7 +47,7 @@ const ProductModal: FC<ProductModalProps> = ({
       onClick={onClose}
     >
       <motion.div
-        className="bg-white p-6 rounded-lg max-w-lg w-11/12  mx-4 max-h-screen overflow-y-auto"
+        className=" p-6 rounded-lg max-w-lg w-11/12  mx-4 max-h-screen overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between items-center">

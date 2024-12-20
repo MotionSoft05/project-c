@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${oxanium.variable} antialiased bg-gray-100 text-gray-900`}
+        className={`${oxanium.variable} antialiased bg-gray-50 text-gray-900`}
       >
         {/* Header común */}
         <Header />

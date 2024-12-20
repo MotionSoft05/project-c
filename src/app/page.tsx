@@ -23,10 +23,10 @@ export default function Home() {
         <LavadoForm />
       </section> */}
 
-      <section id="servicios" className=" bg-white">
+      <section id="servicios" className=" bg-gray-50">
         <Servicios />
       </section>
-      <section id="servicios" className=" bg-white">
+      <section id="servicios" className=" bg-gray-50">
         <Productos />
       </section>
       <section id="testimonios" className=" bg-gray-50">

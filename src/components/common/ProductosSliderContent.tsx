@@ -16,7 +16,7 @@ interface ProductosInfoProps {
 
 const ProductosInfo: React.FC<ProductosInfoProps> = ({ producto }) => {
   return (
-    <div className="relative w-full h-44 bg-white rounded-lg shadow-md overflow-hidden">
+    <div className="relative w-full h-44  rounded-lg shadow-md overflow-hidden">
       <div className="relative w-full h-full">
         <Image
           src={producto.image} // Utiliza el atributo `src` como la URL de la imagen
