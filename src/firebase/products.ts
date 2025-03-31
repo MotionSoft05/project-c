@@ -109,7 +109,7 @@ export const updateProduct = async (
   imageFile?: File
 ) => {
   try {
-    let updateData = { ...productData };
+    const updateData = { ...productData };
 
     // Si hay una nueva imagen, subirla y actualizar la URL
     if (imageFile) {

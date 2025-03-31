@@ -5,8 +5,20 @@ import { getProducts, deleteProduct } from "@/firebase/products";
 import Link from "next/link";
 import Image from "next/image";
 
+// Definición de interfaz para los productos
+interface Product {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  discountPrice?: number;
+  category: string;
+  image?: string;
+  stock?: number;
+}
+
 export default function ProductsPage() {
-  const [products, setProducts] = useState<any[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [categories, setCategories] = useState<string[]>([]);
@@ -14,7 +26,7 @@ export default function ProductsPage() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const productsData = await getProducts();
+        const productsData = (await getProducts()) as Product[];
         setProducts(productsData);
 
         // Extraer categorías únicas

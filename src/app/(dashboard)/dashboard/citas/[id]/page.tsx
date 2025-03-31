@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import { db } from "@/firebase/config";
-import { updateAppointmentStatus } from "@/firebase/appointments";
 
 export default function AppointmentDetailPage() {
   const router = useRouter();
