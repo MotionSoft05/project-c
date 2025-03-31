@@ -9,13 +9,21 @@ import {
   FaChartBar,
   FaUsers,
   FaCog,
+  FaBars,
+  FaChevronLeft,
 } from "react-icons/fa";
 
 export default function Sidebar() {
   const pathname = usePathname();
+  const [collapsed, setCollapsed] = useState(false);
 
   const menuItems = [
     { name: "Panel Principal", path: "/dashboard", icon: <FaChartBar /> },
+    {
+      name: "Solicitudes",
+      path: "/dashboard/solicitudes",
+      icon: <FaCalendarAlt />,
+    },
     { name: "Citas", path: "/dashboard/citas", icon: <FaCalendarAlt /> },
     { name: "Productos", path: "/dashboard/productos", icon: <FaSprayCan /> },
     { name: "Clientes", path: "/dashboard/clientes", icon: <FaUsers /> },
@@ -26,10 +34,24 @@ export default function Sidebar() {
     },
   ];
 
+  const toggleSidebar = () => {
+    setCollapsed(!collapsed);
+  };
+
   return (
-    <div className="w-64 bg-gray-800 text-white h-screen">
-      <div className="p-4">
-        <h2 className="text-2xl font-bold">Carwash Admin</h2>
+    <div
+      className={`transition-all duration-300 ease-in-out bg-gray-800 text-white h-screen ${
+        collapsed ? "w-20" : "w-64"
+      }`}
+    >
+      <div className="p-4 flex justify-between items-center">
+        {!collapsed && <h2 className="text-2xl font-bold">Carwash Admin</h2>}
+        <button
+          onClick={toggleSidebar}
+          className="text-white p-2 rounded hover:bg-gray-700"
+        >
+          {collapsed ? <FaBars /> : <FaChevronLeft />}
+        </button>
       </div>
       <nav className="mt-6">
         <ul>
@@ -43,8 +65,10 @@ export default function Sidebar() {
                       : "text-gray-300 hover:bg-gray-700"
                   }`}
                 >
-                  <span className="mr-3">{item.icon}</span>
-                  {item.name}
+                  <span className={collapsed ? "mx-auto" : "mr-3"}>
+                    {item.icon}
+                  </span>
+                  {!collapsed && <span>{item.name}</span>}
                 </div>
               </Link>
             </li>
