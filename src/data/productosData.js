@@ -1038,7 +1038,7 @@ export const categoriesData = [
   },
   {
     id: 13,
-    title: "Accesorios de Limpieza",
+    title: "ACCESORIOS DE LIMPIEZA",
     description:
       "Una amplia gama de accesorios para facilitar el proceso de detallado, desde guantes hasta toallas y cepillos especializados para cada tipo de superficie.",
     image: carwash1,

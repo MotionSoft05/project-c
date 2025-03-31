@@ -6,7 +6,7 @@ export default function Localizacion() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Título con estilo mejorado */}
         <h2 className="text-4xl font-bold text-gray-900 text-center mb-4">
-          Visítanos en Carwash
+          Visitanos en Carwash
         </h2>
 
         {/* Descripción de contacto */}

@@ -1,12 +1,17 @@
-"use client"; // Necesario para hooks en Next.js
+"use client";
 
 import { twMerge } from "tailwind-merge";
 import useSticky from "@/hooks/useSticky";
-import { FaInstagram, FaFacebookF } from "react-icons/fa"; // Importa los íconos de react-icons
+import { FaInstagram, FaFacebookF } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
-  const { sticky } = useSticky(150); // Hook para activar sticky después de 150px
+  const { sticky } = useSticky(150);
+  const router = useRouter();
 
+  const handleAdminAccess = () => {
+    router.push("/login");
+  };
   return (
     <header
       className={twMerge(
@@ -17,7 +22,10 @@ export default function Header() {
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <div>
+        <div
+          onClick={handleAdminAccess}
+          className="cursor-pointer hover:opacity-80 transition-opacity"
+        >
           <h1 className="text-xl font-bold">Carwash</h1>
           <p className="text-sm text-gray-600">
             Estética vehicular y detailing SN
